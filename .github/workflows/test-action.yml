@@ -38,7 +38,7 @@ jobs:
               uses: actions/checkout@v4
 
             - name: Use set-github-variables action (marketplace)
-              uses: Ben-Withnell/set-github-variables@v1.0.0
+              uses: Ben-Withnell/set-github-variables@v1.1.0
               # with:
               #   example-input: value
               # Add required inputs here if your action expects any
