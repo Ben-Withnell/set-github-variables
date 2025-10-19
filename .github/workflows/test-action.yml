@@ -9,7 +9,6 @@ on:
 jobs:
     build-and-test:
         runs-on: ubuntu-latest
-        environment: dev
         steps:
             - name: Checkout repository
               uses: actions/checkout@v4
@@ -34,7 +33,7 @@ jobs:
     test-action-usage:
         needs: build-and-test
         runs-on: ubuntu-latest
-        envornment: dev
+        environment: dev
         steps:
             - name: Checkout repository
               uses: actions/checkout@v4
