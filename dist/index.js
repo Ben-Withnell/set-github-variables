@@ -11,7 +11,9 @@ function setEnvironment({ core }) {
     const parsedContext = JSON.parse(
         node_process_1.default.env.DEPLOY_CONTEXT ?? '{}'
     );
-    console.log(parsedContext);
+    core.info('This will appear in the GitHub Actions log:');
+    core.info(parsedContext);
+    core.info(core);
     if (!isObject(parsedContext)) {
         return;
     }
