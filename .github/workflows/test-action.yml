@@ -29,3 +29,19 @@ jobs:
 
             - name: Run tests
               run: npm test
+
+    test-action-usage:
+        needs: build-and-test
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Use set-github-variables action (marketplace)
+              uses: Ben-Withnell/set-github-variables@v1.0.0
+              # with:
+              #   example-input: value
+              # Add required inputs here if your action expects any
+
+            - name: Print all environment variables
+              run: printenv | sort
