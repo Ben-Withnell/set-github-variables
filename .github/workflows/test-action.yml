@@ -37,11 +37,16 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v4
 
+            - name: Print all environment variables
+              run: printenv | sort
+
+            - name: Print vars context
+              run: echo "${{ toJSON(vars) }}"
+
             - name: Use set-github-variables action (marketplace)
               uses: Ben-Withnell/set-github-variables@v1.1.0
-              # with:
-              #   example-input: value
-              # Add required inputs here if your action expects any
+              env:
+                  DEPLOY_CONTEXT: ${{ toJSON(vars) }}
 
             - name: Print all environment variables
               run: printenv | sort
