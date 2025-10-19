@@ -3,6 +3,8 @@ import process from 'node:process';
 export function setEnvironment({ core }) {
     const parsedContext = JSON.parse(process.env.DEPLOY_CONTEXT ?? '{}');
 
+    console.log(parsedContext);
+
     if (!isObject(parsedContext)) {
         return;
     }

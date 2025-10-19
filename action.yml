@@ -1,5 +1,5 @@
 name: 'Set GitHub Configuration variables'
 description: 'Set GitHub Configuration variables in the workflow'
 runs:
-    using: 'node22'
+    using: 'node20'
     main: 'dist/index.js'
