@@ -1,0 +1,43 @@
+{
+    "name": "set-github-variables",
+    "version": "1.0.0",
+    "description": "Sets Github Configuration Variables in Github Actions",
+    "homepage": "https://github.com/Ben-Withnell/set-github-variables#readme",
+    "bugs": {
+        "url": "https://github.com/Ben-Withnell/set-github-variables/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Ben-Withnell/set-github-variables.git"
+    },
+    "license": "MIT",
+    "author": "Ben W",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc",
+        "check-format": "prettier --check .",
+        "format": "prettier --write .",
+        "lint": "xo",
+        "prepare": "husky",
+        "test": "vitest run"
+    },
+    "prettier": {
+        "bracketSpacing": true,
+        "endOfLine": "auto",
+        "singleQuote": true,
+        "tabWidth": 4,
+        "trailingComma": "es5"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^20.1.0",
+        "@vitest/coverage-v8": "^3.2.4",
+        "conventional-changelog-conventionalcommits": "^9.1.0",
+        "husky": "^9.1.7",
+        "lint-staged": "^16.2.4",
+        "prettier": "^3.6.2",
+        "sort-package-json": "^3.4.0",
+        "typescript": "^5.9.3",
+        "vitest": "^3.2.4",
+        "xo": "^1.2.3"
+    }
+}
