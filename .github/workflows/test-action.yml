@@ -44,7 +44,7 @@ jobs:
               run: echo "${{ toJSON(vars) }}"
 
             - name: Use set-github-variables action (marketplace)
-              uses: Ben-Withnell/set-github-variables@v1.1.0
+              uses: Ben-Withnell/set-github-variables@v1.1.1
               env:
                   DEPLOY_CONTEXT: ${{ toJSON(vars) }}
 
