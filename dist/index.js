@@ -11,6 +11,7 @@ function setEnvironment({ core }) {
     const parsedContext = JSON.parse(
         node_process_1.default.env.DEPLOY_CONTEXT ?? '{}'
     );
+    console.log(parsedContext);
     if (!isObject(parsedContext)) {
         return;
     }
